@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 declare const gapi : any;
-
+//reference - https://developers.google.com/identity/sign-in/web/build-button
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
