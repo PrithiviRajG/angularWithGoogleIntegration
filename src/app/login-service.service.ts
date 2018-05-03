@@ -23,7 +23,7 @@ params.set('facultyCode',faculty.toString());
   let requestOption:RequestOptionsArgs = {search: params, headers: headersvar};
 
   return this.http
-    .get('http://www.learnvant.com/DrillWebServiceV1/googleSignIn', requestOption)
+    .get('https://www.learnvant.com/DrillWebServiceV1/googleSignIn', requestOption)
     .toPromise()
     .then(this.extractData)
 

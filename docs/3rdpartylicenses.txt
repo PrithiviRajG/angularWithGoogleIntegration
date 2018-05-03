@@ -75,11 +75,15 @@ MIT
 MIT
 MIT
 
-@angular/common@5.2.10
+@angular/router@5.2.10
 MIT
 MIT
 
 @angular/http@5.2.10
+MIT
+MIT
+
+@angular/common@5.2.10
 MIT
 MIT
 

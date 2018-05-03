@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {OAuth} from "./oauth";
 import {LoginServiceService} from "./login-service.service";
+import {Router, ActivatedRoute, Params} from '@angular/router';
 declare const gapi : any;
 //reference - https://developers.google.com/identity/sign-in/web/build-button
 //Backend Validation - https://developers.google.com/identity/sign-in/web/backend-auth
@@ -24,9 +25,17 @@ export class AppComponent {
   locationURL : any;
   googleUser : any;
 
-  constructor(public loginService : LoginServiceService){
+  constructor(public loginService : LoginServiceService, private activatedRoute: ActivatedRoute){
     this.oauth = new OAuth()
-    
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.state = params['state'];
+      this.client_id  = params['client_id'];
+      this.response_type = params['response'];
+      this.scope = params['scope'];
+      this.redirect_uri = params['redirect_uri'];
+      
+  });
+
   }
 
   public auth2: any;
@@ -91,5 +100,6 @@ export class AppComponent {
       console.log('User signed out.');
     });
   }
+  
 
 }
