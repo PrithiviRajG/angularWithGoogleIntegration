@@ -14,16 +14,15 @@ export class LoginServiceService {
 let faculty : string = "verbalyn";
 
 params.set('idTokens', idToken.toString());
-params.set('facultyCode',faculty.toString());
-
-  params.set('examId','4');
+params.set('skillName',"SAT Word");
+params.set('examId', "6")
 
 
 
   let requestOption:RequestOptionsArgs = {search: params, headers: headersvar};
 
   return this.http
-    .get('https://www.learnvant.com/DrillWebServiceV1/googleSignIn', requestOption)
+    .get('https://www.learnvant.com/DrillWebServiceV1/googleLoginForAlexa', requestOption)
     .toPromise()
     .then(this.extractData)
 
