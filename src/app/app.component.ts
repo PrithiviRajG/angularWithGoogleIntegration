@@ -12,7 +12,7 @@ declare const gapi : any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'SAT Word';
   oauth : any;
 
   state : any;
